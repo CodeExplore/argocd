@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx:alpine
         # image: brndnmtthws/nginx-echo-headers
         ports:
         - containerPort: 80
