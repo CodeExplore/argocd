@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: brndnmtthws/nginx-echo-headers
+        image: nginx
+        # image: brndnmtthws/nginx-echo-headers
         ports:
         - containerPort: 8080
 ---
