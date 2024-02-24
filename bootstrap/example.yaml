@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: deneme
+  name: example
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/CodeExplore/argocd.git
     targetRevision: HEAD
-    path: apps/deneme
+    path: apps/example
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
