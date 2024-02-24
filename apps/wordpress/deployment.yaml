@@ -15,7 +15,7 @@ spec:
         app: wp-app
     spec:
       containers:
-      - name: nginx
+      - name: wp-app
         image: brndnmtthws/nginx-echo-headers
         ports:
         - containerPort: 8080
