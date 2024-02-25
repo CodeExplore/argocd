@@ -19,24 +19,4 @@ spec:
         image: codeexplore8080/wp
         ports:
         - containerPort: 8080
-        - env:
-          - name: MARIADB_HOST
-            value: mariadb
-          - name: MARIADB_PORT_NUMBER
-            value: '3306'
-          - name: WORDPRESS_DATABASE_NAME
-            value: my_database
-          - name: WORDPRESS_DATABASE_USER
-            value: root
-          - name: WORDPRESS_DATABASE_PASSWORD
-            value: admin
-          - name: WORDPRESS_USERNAME
-            value: admin
-          - name: WORDPRESS_PASSWORD
-            value: admin
-          - name: WORDPRESS_EMAIL
-            value: user@example.com
-          - name: WORDPRESS_FIRST_NAME
-            value: FirstName
-          - name: WORDPRESS_LAST_NAME
-            value: LastName
+
