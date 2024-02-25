@@ -19,4 +19,10 @@ spec:
         image: codeexplore8080/wp
         ports:
         - containerPort: 8080
-
+        - env:
+          - name: WORDPRESS_DATABASE_NAME
+            value: my_database
+          - name: WORDPRESS_DATABASE_USER
+            value: root
+          - name: WORDPRESS_DATABASE_PASSWORD
+            value: mA()()19861991root
