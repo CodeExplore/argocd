@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: wp-db
-        image: bitnami/mariadb:16.3.2
+        image: bitnami/mariadb:11.2.3-debian-12-r4
         env:
         - name: MARIADB_DATABASE
           value: my_database
