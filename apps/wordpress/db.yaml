@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wp-db-deployment
+  labels:
+    app: wp-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wp-db
+  template:
+    metadata:
+      labels:
+        app: wp-db
+    spec:
+      containers:
+      - name: wp-db
+        image: bitnami/mariadb:16.3.2
+        env:
+        - name: MARIADB_DATABASE
+          value: my_database
+        - name: MARIADB_ROOT_PASSWORD
+          value: mA()()19861991root
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wp-db-service
+spec:
+  selector:
+    app: wp-db
+  ports:
+    - name: mysql
+      port: 3306
+      protocol: TCP
+      targetPort: mysql
+  type: ClusterIP
